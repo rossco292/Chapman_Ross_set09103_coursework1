@@ -1,9 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
-@app.route("/home")
-def home():
-  return "Welcome to the Magic The Gathering collection"
+@app.route("/home/<name>")
+def home(name=None):
+  user = {'name': name}
+  return render_template('home.html', user=user)
 
 @app.route("/colours")
 def colours():
