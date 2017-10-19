@@ -1,23 +1,43 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 app = Flask(__name__)
 
-@app.route("/home/<name>")
-def home(name=None):
-  user = {'name': name}
-  return render_template('home.html', user=user)
+@app.route("/home")
+def home():
+  return render_template('home.html')
 
-@app.route("/colours")
-def colours():
-  return "This page is about the different colours and their attribuits"
+@app.route("/red")
+def red():
+  return render_template('red.html')
 
-@app.route("/card_types")
-def cardtypes():
-  return "There are many cardtypes in magic and here is information on all \
-  of the different ones"
+@app.route("/green")
+def green():
+  return render_template('green.html')
 
-@app.route("/basics")
-def basics():
-  return "This page is all about the basics of the game"
+@app.route("/blue")
+def blue():
+  return render_template('blue.html')
+
+@app.route("/black")
+def black():
+  return render_template('black.html')
+
+@app.route("/white")
+def white():
+  return render_template('white.html')
+
+@app.route("/creatures")
+def creatures():
+  return render_template('creatures.html')
+
+@app.route("/land")
+def land():
+  return render_template('land.html')
+
+@app.route("/spells")
+def spells():
+  return render_template('spells.html')
+
+
 
 
 
