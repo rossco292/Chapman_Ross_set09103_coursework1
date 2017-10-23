@@ -2,7 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
-</head>
+</head><!--This is where the css file is loaded in from the static -->
 <body>
 <h1>Black</h1>
 <div>
@@ -11,5 +11,8 @@ abilities but you have to sacrifice your monsters and life to use these
 abilities and spells</p>
 </div>
 <img src="{{url_for('static', filename='SWAMP.jpg')}}">
+<!-- This is where the image and referance to the homne page are done 
+ The image is also loaded from the static folder --> 
+<h4><a href="http://localhost:5000/home">Home</a></h4>
 </body>
 </html>
